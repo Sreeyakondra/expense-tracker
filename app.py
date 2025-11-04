@@ -19,6 +19,7 @@ init_db()
 
 @app.route('/expenses', methods=['GET'])
 def get_expenses():
+    print("Fetching all expenses...")
     conn = sqlite3.connect('expenses.db')
     c = conn.cursor()
     c.execute('SELECT * FROM expenses')
