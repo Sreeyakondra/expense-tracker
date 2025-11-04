@@ -17,3 +17,7 @@ def test_add_expense(client):
 def test_get_expenses(client):
     response = client.get('/expenses')
     assert response.status_code == 200
+
+def test_fail_demo():
+    assert 1 == 2
+
